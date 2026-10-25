@@ -1,0 +1,134 @@
+:root {
+  --bg: #f4f5f7;
+  --surface: #ffffff;
+  --text: #1c1e21;
+  --muted: #65676b;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --danger: #b91c1c;
+  --border: #e2e4e8;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+h1 {
+  margin: 8px 0 16px;
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.form h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.form input:not([type='file']),
+.form textarea {
+  font: inherit;
+  color: var(--text);
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background: var(--accent);
+  color: #fff;
+}
+
+button:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.error {
+  color: var(--danger);
+  margin: 0;
+}
+
+.status {
+  text-align: center;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card img,
+.no-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--border);
+}
+
+.no-image {
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+}
+
+.card-body {
+  padding: 12px;
+}
+
+.card h2 {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  overflow-wrap: anywhere;
+}
+
+.price {
+  margin: 0 0 8px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.description {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
